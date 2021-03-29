@@ -7,7 +7,7 @@ const ProductList = ({ products }) => (
                     <ProductItem key={`${product.id}_${product.price}`} product={product} />,
             )}
             </ul>
-    );
+);
 
 
 export default ProductList;
