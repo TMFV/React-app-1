@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1> Hello, from React!!!</h1>
+      <h1> React App SHOP</h1>
 {/*       <MyFirstComponent usera={userName} x={73} />
       <MySecondComponent userb={userName} />
       <MyThirdComponent>
