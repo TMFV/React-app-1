@@ -4,6 +4,7 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 import './styles.css';
 
+
 const App = () => {
     return (
         <div className="shop">
