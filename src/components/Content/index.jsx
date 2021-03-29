@@ -1,7 +1,8 @@
+import Products from '../../pages/Products';
 const Content = () => {
     return (
         <div className="content">
-            <p>Content text</p>
+            <Products />
         </div>
     );
 };
