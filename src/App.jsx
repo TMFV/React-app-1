@@ -1,14 +1,17 @@
 import Header from './components/Header'
+import Menu from './components/Menu'
+import Content from './components/Content'
+import Footer from './components/Footer'
 const App = () => {
     return (
         <div className="shop">
             <Header />
             <div className="body">
-                <div className="menu"></div>
-                <div className="content"></div>
+                <Menu />
+                <Content />
             </div>
-            <div className="footer"></div>
+            <Footer />
         </div>
-    )
+    );
 };
 export default App;

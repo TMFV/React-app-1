@@ -3,6 +3,6 @@ const Header = () => {
         <div className="header">
             <p>Header text</p>
         </div>
-    )
-}
+    );
+};
 export default Header;
