@@ -31,11 +31,14 @@ const products = [
     },
 ];
 const Products = () => {
+
     return (
         <div className="products">
             <ProductList products = {products} />
+            <p>1</p>
         </div>
     );
 };
+
 
 export default Products;
