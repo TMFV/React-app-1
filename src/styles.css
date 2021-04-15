@@ -18,8 +18,3 @@
   display: flex;
   flex: 1;
 }
-
-.product-item__img {
-  max-height: 300px;
-  max-width: 300px;
-}
