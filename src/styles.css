@@ -6,11 +6,6 @@
 .body {
   display: flex;
 }
-.header {
-  border: 1px solid #000000;
-  display: flex;
-  flex: 1;
-}
 
 .menu {
   border: 1px solid #000000;
@@ -24,13 +19,7 @@
   flex: 1;
 }
 
-.footer {
-  border: 1px solid #000000;
-  display: flex;
-  flex: 1;
+.product-item__img {
+  max-height: 300px;
+  max-width: 300px;
 }
-.product-item__img{
-    max-height: 300px;
-    max-width: 300px;
-}
-

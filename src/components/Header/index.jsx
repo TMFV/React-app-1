@@ -1,8 +1,9 @@
+import styles from './styles.module.css';
 const Header = () => {
-    return (
-        <div className="header">
-            <p>Header text</p>
-        </div>
-    );
+  return (
+    <div className={styles.header}>
+      <p>Header text</p>
+    </div>
+  );
 };
 export default Header;
