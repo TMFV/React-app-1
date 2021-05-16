@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import ProductList from '../components/ProductList';
 
 const products = [
@@ -32,6 +33,15 @@ const products = [
 ];
 
 const Products = () => {
+  const [products, setProducts] = useState([
+    {
+      id: 1,
+      name: 'Phone 1100',
+      price: 5000,
+      count: 8,
+      imgRef: 'phoneimg',
+    },
+  ]);
   return (
     <div className="products">
       <ProductList products={products} />
