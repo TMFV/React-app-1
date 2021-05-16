@@ -1,6 +1,6 @@
 import Products from '../../pages/Products';
 import Contacts from '../../components/Contacts';
-import Todos from '../../pages/Todos/index';
+import Counters from '../../pages/Counters/index';
 
 console.dir(window.location);
 
@@ -11,7 +11,7 @@ const Content = () => {
     <div className="content">
       {pathname === '/Products' && <Products />}
       {pathname === '/contacts' && <Contacts />}
-      {pathname === '/todos' && <Todos />}
+      {pathname === '/counters' && <Counters />}
     </div>
   );
 };

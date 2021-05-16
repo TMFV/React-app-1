@@ -8,7 +8,7 @@ const Menu = () => {
       <a href="/order">Order</a>
       <a href="/profile">Profile</a>
       <a href="/contacts">Contacts</a>
-      <a href="/todos">Todos</a>
+      <a href="/counters">Counters</a>
     </div>
   );
 };
