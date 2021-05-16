@@ -10,10 +10,10 @@ const useStyles = createUseStyles({
 
 const limit = 50;
 
-const SingleCounter = () => {
+const SingleCounter = ({ initialValue = 0 }) => {
   const classes = useStyles();
 
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(initialValue);
   const [step, setStep] = useState(1);
 
   const handleIncrement = () => {
@@ -33,7 +33,7 @@ const SingleCounter = () => {
 
   return (
     <div className={classes.counter}>
-      <h2>SingleTodo</h2>
+      <h2>SingleCounter</h2>
       <label htmlFor="">
         Step
         <select value={step} onChange={handleChangeStep}>

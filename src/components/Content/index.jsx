@@ -1,6 +1,7 @@
-import Products from '../../pages/Products';
-import Contacts from '../../components/Contacts';
-import Counters from '../../pages/Counters/index';
+//import Products from '../../pages/Products';
+//import Contacts from '../../components/Contacts';
+//import Counters from '../../pages/Counters/index';
+import { routes } from '../routes';
 
 console.dir(window.location);
 
@@ -9,9 +10,12 @@ const Content = () => {
 
   return (
     <div className="content">
-      {pathname === '/Products' && <Products />}
+      {routes.map(({ id, link, component: Component }) =>
+        pathname === link ? <Component key={id} /> : null,
+      )}
+      {/* {pathname === '/products' && <Products />}
       {pathname === '/contacts' && <Contacts />}
-      {pathname === '/counters' && <Counters />}
+      {pathname === '/counters' && <Counters />} */}
     </div>
   );
 };

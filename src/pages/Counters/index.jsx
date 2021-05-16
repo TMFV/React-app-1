@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-//import SingleCounter from './SingleCounter';
+import SingleCounter from './SingleCounter';
 import CounterList from './CounterList';
 
 const Counters = () => {
@@ -48,7 +48,7 @@ const Counters = () => {
 
   return (
     <div className="counters">
-      <h2>Todos</h2>
+      <h2>Counters</h2>
       <button onClick={addCounter}>+ Add counter</button>
       <CounterList
         counters={counters}
@@ -56,7 +56,7 @@ const Counters = () => {
         onDecrement={handleDecrement}
         onDelete={handleDeleteCounter}
       />
-      {/* <SingleCounter /> */}
+      <SingleCounter initialValue={5} />
     </div>
   );
 };
