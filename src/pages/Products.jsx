@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import ProductList from '../components/ProductList';
+import ProductForm from '../components/ProductForm';
 
-const products = [
+/* const products = [
   {
     id: 1,
     name: 'Phone 1100',
@@ -30,7 +31,7 @@ const products = [
     count: 3,
     imgRef: 'notebookimg',
   },
-];
+]; */
 
 const Products = () => {
   const [products, setProducts] = useState([
@@ -42,8 +43,20 @@ const Products = () => {
       imgRef: 'phoneimg',
     },
   ]);
+
+  const handleAddProduct = newItem => {
+    /* newItem = {
+      id: Date.now(), // uuid or backend id
+      name: 'Phone 2200',
+      price: 100000,
+      count: 18,
+      imgRef: 'phoneimg',
+    }; */
+    setProducts(prev => [...prev, newItem]);
+  };
   return (
     <div className="products">
+      <ProductForm onSubmit={handleAddProduct} />
       <ProductList products={products} />
     </div>
   );

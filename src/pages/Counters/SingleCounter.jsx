@@ -6,6 +6,11 @@ const useStyles = createUseStyles({
     padding: 10,
   },
   buttons: { display: 'flex' },
+  animation: {
+    '&:hover': {
+      color: '#31f121',
+    },
+  },
 });
 
 const limit = 50;
@@ -49,7 +54,9 @@ const SingleCounter = ({ initialValue = 0 }) => {
       <div className={classes.buttons}>
         <button onClick={handleIncrement}>+</button>
         <p>{value}</p>
-        <button onClick={handleDecrement}>-</button>
+        <button className={classes.animation} onClick={handleDecrement}>
+          -
+        </button>
       </div>
     </div>
   );
