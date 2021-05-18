@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ProductList from '../components/ProductList';
 import ProductForm from '../components/ProductForm';
 
@@ -43,6 +43,15 @@ const Products = () => {
       imgRef: 'phoneimg',
     },
   ]);
+  //ComponentDidMount
+  useEffect(() => {
+    const prod = JSON.parse(localStorage.getItem('products'));
+    setProducts(prod);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('products', JSON.stringify(products));
+  }, [products]);
 
   const handleAddProduct = newItem => {
     /* newItem = {

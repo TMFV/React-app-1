@@ -22,6 +22,11 @@ const useStyles = createUseStyles({
   image: {
     height: 100,
   },
+  green: {
+    '&.MuiPaper-root': {
+      backgroundColor: 'green',
+    },
+  },
 });
 
 const ProductItem = ({ product }) => {
@@ -31,10 +36,16 @@ const ProductItem = ({ product }) => {
   return (
     <li className={classes.item}>
       <CardActionArea>
-        <Card className={classes.card}>
+        <Card
+          className={[classes.card, product.insurance ? classes.green : '']}
+        >
           <p>Product name: {product.name}</p>
           <p>Price: {product.price}</p>
           <p>Count: {product.count}</p>
+          <p>Color: {product.color || '--'}</p>
+          {/* ?-превіряє наявність об'єкта та приптняє виконання якщо його немає - блокує помилку  undefined  */}
+          <p>A / I: {product?.insurance?.toString() || '--'}</p>
+          <p>I / S: {product?.software?.toString() || '--'}</p>
           <img
             className={classes.image}
             src={loadImage(product.imgRef)}
